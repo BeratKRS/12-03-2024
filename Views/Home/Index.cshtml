@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Lessons.Models.Entities.Customer>
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@foreach (var people in Model)
+{
+    <div class="bg-light p-3 border mb-3">
+        <span class="text-success mb-5">@people.CustomerName</span>
+        <h3>@people.ContactName</h3>
+        <p> @people.City </p>
+    </div>
+}
